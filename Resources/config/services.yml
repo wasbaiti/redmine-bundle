@@ -1,0 +1,15 @@
+services:
+    fluedis_redmine.client:
+        class: Fluedis\RedmineBundle\Service\RedmineApiClient
+        arguments:
+            - "@security.token_storage"
+            - "@request_stack"
+            - "@serializer"
+            - "%redmine.params%"
+
+    fluedis_redmine.exception_listener:
+        class: Fluedis\RedmineBundle\EventListener\ExceptionListener
+        arguments:
+            - "@fluedis_redmine.client"
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }

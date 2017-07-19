@@ -1,0 +1,3 @@
+fluedis_redmine_homepage:
+    path:     /
+    defaults: { _controller: FluedisRedmineBundle:Default:index }

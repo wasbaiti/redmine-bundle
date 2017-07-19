@@ -1,0 +1,23 @@
+{
+  "name": "fluedis/redmine-api-bundle",
+  "license": "proprietary",
+  "type": "symfony-bundle",
+  "description": "Bundle for Redmine API client",
+  "keywords": ["redmine", "api", "bundle"],
+  "authors": [
+    {
+      "name": "Walid ASBAITI",
+      "email": "walid.asbaiti@fluedis.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "kbsali/redmine-api": "^1.5",
+    "jms/serializer-bundle": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fluedis\\RedmineBundle\\": ""
+    }
+  }
+}
